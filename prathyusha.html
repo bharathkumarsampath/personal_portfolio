@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .container {
+        align-items: center;
+        justify-content: center;
+        padding: 6rem 10rem 3rem 10rem;
+    }
+
+    .projects {
+        padding: 20rem 0rem 0rem 9rem;
+    }
+    .project {
+        float: left;
+        padding: 1.5%;
+    }
+    .profile {
+        max-width: 25%;
+        max-height:15%;
+        float: left;
+        width: 250px; 
+        height: 335px; 
+        object-fit: cover;
+        object-position: 25% 15%; 
+    }
+
+    .resume_download{
+        max-width: 7%;
+        max-height:7%;
+        float: left;
+
+    }
+
+    .download_resume_text{
+        float: left;
+        padding-right: 3%;
+    }
+    
+    .text {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 5%;
+        float: left;
+    }
+
+
+    /* Style the Image Used to Trigger the Modal */
+img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+#image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.modal-content { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+#image-viewer .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#image-viewer .close:hover,
+#image-viewer .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+</style>
+<body>
+  
+
+<div class="container">
+    <div class="image">
+        <img class="profile" src="Images/bharath_profile_picture.jpg" height="500">
+    </div>
+    <div class="text">
+        <h3>Myself Bharath Kumar Sampath.<br><br><br>Bachelors in Computer Science and Engineering, VIT Vellore. <br>  
+            Masters in Management Science and Engineering,Lehigh University.<br>
+        </h3>
+        <h3 class="download_resume_text">Download my resume here<h3>
+            <a href="Files/BharathKumarSampath_Resume.pdf" target="_blank" download="BharathKumarSampath_Resume">
+                <img class="resume_download" src="Images/download_resume_icon.jpg" alt="download_resume_icon" >
+            </a>
+    </div>
+</div>
+<br>
+<!-- <div class="resume">
+    <p>Download my resume here<p>
+        <a href="Files/BharathKumarSampath_Resume.pdf" download="BharathKumarSampath_Resume">
+            <img class="resume_download" src="Images/download_resume_icon.jpg" alt="download_resume_icon" >
+        </a>
+</div> -->
+
+<div class="projects">
+
+    <h2>Projects</h2>
+
+    <p class="project"><a target="_blank" href="https://upbeat-beaver-1a0b04.netlify.app/">
+        <img src="Images/covid-vaccine-dashboard.png" alt="" width="300" height="200">
+    </a></p>
+
+    <p class="project"><a target="_blank" href="https://cocky-shockley-0aa294.netlify.app/">
+        <img src="Images/stockticker.jpg" alt="" width="300" height="200">
+    </a></p>
+
+    <p class="project"><a target="_blank" href="https://boring-curie-e1b0e5.netlify.app/">
+      <img src="Images/blogging.jpg" alt="" width="300" height="200">
+    </a></p>
+
+    <p class="project"><a target="_blank" href="https://pensive-easley-a75518.netlify.app/">
+      <img src="Images/burgerbuilder.png" alt="" width="300" height="200">
+    </a></p>
+
+    <p class="project"><a target="_blank" href="https://suspicious-hamilton-17ce9b.netlify.app/">
+      <img src="Images/datepicker.png" alt="" width="300" height="200">
+    </a></p>
+
+    <p class="project"><a target="_blank" href="https://priceless-nobel-3fd4f5.netlify.app/">
+      <img src="Images/hotelreservation.jpg" alt="" width="300" height="200">
+    </a></p>
+
+</div>
+
+<div>
+    <p>
+        Me : Can i have an haircut<br>
+        Barber : Can you wait for a moment, I will go and get alcohol from grocery store?<br>
+        Me : Sure.By the way are you going to give me a harcut after having alcohol<br>
+        Barber : alcohol, not the drink.alcohol, the disinfectant.<br>
+        Me : Oh I see. <br>
+        Barber : Awkard silence...<br>
+        Me : Awkard silence...<br>
+    </p>
+</div>
+
+
+<!-- <div class="images">&times;
+    <img src="Images/covid-vaccine-dashboard.png" alt="" width="300" height="200">
+      <img src="Images/stockticker.jpg" alt="" width="300" height="200">
+      <img src="Images/blogging.jpg" alt="" width="300" height="200">
+      <img src="Images/burgerbuilder.png" alt="" width="300" height="200">
+      <img src="Images/datepicker.png" alt="" width="300" height="200">
+      <img src="Images/hotelreservation.jpg" alt="" width="300" height="200">
+    </div> -->
+    
+    <div id="image-viewer">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="full-image">
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(".images img").click(function(){
+      $("#full-image").attr("src", $(this).attr("src"));
+      $('#image-viewer').show();
+    });
+    
+    $("#image-viewer .close").click(function(){
+      $('#image-viewer').hide();
+    });
+    </script>
+</body>
+</html>
+
